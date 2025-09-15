@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JH Studio Photography</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.5;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+    
+    /* Estilo para la cabecera superior (tipo Banreservas: cambio, etc) */
+    .top-bar {
+      background-color: #0a2d4d;
+      color: white;
+      font-size: 14px;
+      padding: 5px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar .info-left, .top-bar .info-right {
+      display: flex;
+      gap: 15px;
+    }
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Barra de navegación principal */
+    .navbar {
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .navbar .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .navbar .logo {
+      flex: 1;
+    }
+    .navbar .logo a {
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+      color: #0a2d4d;
+    }
+    .navbar .menu {
+      display: flex;
+      gap: 20px;
+    }
+    .navbar .menu-item {
+      position: relative;
+    }
+    .navbar .menu-item > a {
+      text-decoration: none;
+      color: #0a2d4d;
+      font-weight: 500;
+      padding: 8px 12px;
+      display: inline-block;
+    }
+    .navbar .menu-item > a:hover {
+      background-color: #e0e0e0;
+      border-radius: 4px;
+    }
+    .navbar .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      z-index: 1000;
+    }
+    .navbar .submenu a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+    .navbar .submenu a:hover {
+      background-color: #f1f1f1;
+    }
+    .navbar .menu-item:hover .submenu {
+      display: block;
+    }
+
+    /* Contenido principal */
+    .hero {
+      background-image: url('https://via.placeholder.com/1200x400'); /* Imagen de ejemplo */
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+    .hero h1 {
+      font-size: 48px;
+      background-color: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .content h2 {
+      color: #0a2d4d;
+      margin-bottom: 20px;
+    }
+    .content p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    /* Pie de página */
+    .footer {
+      background-color: #0a2d4d;
+      color: white;
+      padding: 30px 20px;
+    }
+    .footer .footer-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .footer .footer-section {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 20px;
+    }
+    .footer .footer-section h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .footer .footer-section a {
+      color: #ddd;
+      display: block;
+      margin-bottom: 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .footer .footer-section a:hover {
+      color: #fff;
+    }
+    .footer .footer-bottom {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera superior -->
+  <div class="top-bar">
+    <div class="info-left">
+      <span>@:Jhstudiophotography</span>
+      <span><a href="#">Sobre nosotros</a></span>
+      <span><a href="#">Contacto</a></span>
+    </div>
+    <div class="info-right">
+      <a href="#">Iniciar Sesión</a>
+      <a href="#">Suscripciones</a>
+    </div>
+  </div>
+
+  <!-- Barra de navegación principal -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#">JH Studio Photography</a>
+      </div>
+      <div class="menu">
+        <div class="menu-item">
+          <a href="#">Inicio</a>
+        </div>
+        <div class="menu-item">
+          <a href="#">Portafolio</a>
+          <div class="submenu">
+            <a href="#">Bodas</a>
+            <a href="#">Retratos</a>
+            <a href="#">Eventos Corporativos</a>
+            <a href="#">Paisajes</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <a href="#">Servicios</a>
+          <div class="submenu">
+            <a href="#">Sesiones Fotográficas</a>
+            <a href="#">Edición & Retoque</a>
+            <a href="#">Workshops</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <a href="#">Sobre mí</a>
+          <div class="submenu">
+            <a href="#">Mi Historia</a>
+            <a href="#">Equipo & Técnicas</a>
+            <a href="#">Testimonios</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <a href="#">Blog</a>
+        </div>
+        <div class="menu-item">
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección Hero/banner -->
+  <section class="hero">
+    <h1>Capturamos tus momentos más preciados</h1>
+  </section>
+
+  <!-- Contenido principal -->
+  <div class="content">
+    <h2>Nuestros Servicios</h2>
+    <p>En JH Studio Photography ofrecemos sesiones fotográficas personalizadas, edición profesional, workshops y asesoría creativa. Nuestro objetivo es ayudarte a que cada imagen cuente una historia.</p>
+
+    <h2>Portafolio Destacado</h2>
+    <p>Echa un vistazo a algunos de nuestros trabajos recientes en bodas, retratos y eventos corporativos. Cada proyecto es único y adaptado a tu estilo.</p>
+
+    <h2>Testimonios</h2>
+    <p>“JH Studio capturó cada detalle de nuestra boda, superando todas nuestras expectativas.” – Cliente Feliz</p>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Enlaces útiles</h3>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Preguntas frecuentes</a>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <a href="https://www.facebook.com/profile.php?id=61580367691202">Facebook</a>
+        <a href="https://www.instagram.com/jhstudiophotography">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>Email: jhstudiophotography@gmail.com</p>
+        <p>Tel: +1 829 869 xxxx</p>
+        <p>Dirección: Santo Domingo, Republica Dominicana</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 JH Studio Photography. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
+
