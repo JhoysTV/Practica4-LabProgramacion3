@@ -1,0 +1,4 @@
+const menuToggle=document.querySelector('.menu-toggle');const navMenu=document.querySelector('.menu ul');if(menuToggle){menuToggle.addEventListener('click',()=>{navMenu.classList.toggle('open');menuToggle.classList.toggle('active');});}
+const form=document.querySelector('.contact-form');if(form){form.addEventListener('submit',e=>{e.preventDefault();const nombre=form.querySelector('input[type="text"]').value.trim();const email=form.querySelector('input[type="email"]').value.trim();const mensaje=form.querySelector('textarea').value.trim();if(!nombre||!email||!mensaje){alert('Por favor completa todos los campos antes de enviar.');return;}
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('Por favor introduce un correo electrónico válido.');return;}
+alert(`¡Gracias ${nombre}! Tu mensaje ha sido enviado con éxito.`);form.reset();});}
